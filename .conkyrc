@@ -1,0 +1,66 @@
+# Основные настройки conky
+own_window yes
+own_window_class Conky
+own_window_argb_visual yes
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+background no
+update_interval 1
+total_run_times 0
+
+cpu_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+
+# Характеристики отображения окна
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 250 250
+maximum_width 250
+
+alignment tr
+gap_y 15
+gap_x 15
+
+# Настройки графики
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Настройки текста
+use_xft yes
+xftfont Sans Serif:size=11
+xftalpha 0.8
+text_buffer_size 2048
+
+uppercase no
+
+temperature_unit celsius
+
+
+default_color 839496
+
+
+TEXT
+
+# Информация о нагрузке на ядра процессора и ОЗУ
+${font zekton:style=Bold:pixelsize=14}ЗАГРУЗКА ядер ЦП${font  Snap.se:size=8} ${hr}
+
+${font StyleBats:size=18} ❶ ${font} ${cpu cpu1}% ${alignr}| ${freq 1} МГц
+${font StyleBats:size=18} ❷ ${font} ${cpu cpu2}% ${alignr}| ${freq 2} МГц
+${font StyleBats:size=18} ❸ ${font} ${cpu cpu3}% ${alignr}| ${freq 3} МГц
+${font StyleBats:size=18} ❹ ${font} ${cpu cpu4}% ${alignr}| ${freq 4} МГц
+${hr}
+
+${font}ОЗУ ${alignr}$mem / $memmax ($memperc%)
+${membar 8}
